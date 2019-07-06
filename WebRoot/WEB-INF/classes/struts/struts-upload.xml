@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">	
+<struts>	
+	<package name="upload" extends="struts-default,json-default" namespace="/upload">
+		<!-- 配置处理文件上传的Action -->
+		<action name="uploadPro" class="com.hust.action.upload.UploadAction">
+			<!-- 动态设置Action的属性值 -->
+			<param name="allowTypes">image/png,image/gif,image/jpeg</param>
+			<param name="savePath">/uploadFiles</param>
+			<!-- 配置Struts 2默认的视图页面 -->
+			<result name="result" type="json">
+              <param name="root">jsonMap</param>
+            </result>	
+		</action>
+		<!-- 
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>	
+		</action>-->
+	</package>
+</struts>

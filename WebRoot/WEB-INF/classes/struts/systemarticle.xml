@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="systemarticle" extends="struts-default" namespace="/systemarticle">
+
+		<action name="systemarticle_*" class="com.hust.action.systemarticle.SystemArticleAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>
+			<result name="goTopSystemarticle">/WEB-INF/page/sqgl/topsystemarticle.jsp</result>
+			<result name="goDeleteSystemarticle">/WEB-INF/page/sqgl/deletesystemarticle.jsp</result>
+			<result name="gomanagerank">/WEB-INF/page/hygl/managerank.jsp</result>
+			<result name="gomanagerankmenu">/WEB-INF/page/hygl/managerankmenu.jsp</result>
+			<result name="searchAllArticleByKeyword" >
+				/display.jsp
+			</result>
+			<result name="topSystemArticle" >
+				/display.jsp
+			</result>
+			<result name="deleteSystemArticle">
+				/display.jsp
+			</result>
+			<result name="resetSystemArticle" >
+				/display.jsp
+			</result>
+			<result name="deleteRank">
+				/display.jsp
+			</result>
+			<result name="addRank" >
+				/display.jsp
+			</result>
+			<result name="editRank">
+				/display.jsp
+			</result>
+			<result name="saveRankMemberMenu">
+				/display.jsp
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="compayShowAdm"
+  id="myeclipse.1426255508574"
+  context-root="/adm"
+  j2ee-spec="5.0"
+  archive="compayShowAdm.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

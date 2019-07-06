@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="trade" extends="struts-default" namespace="/trade">
+
+		<action name="trade_*" class="com.hust.action.trade.TradeAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>			
+			<result name="goAuditTrade">/WEB-INF/page/gggl/audittrade.jsp</result>
+			<result name="goDeleteTrade">/WEB-INF/page/gggl/deletetrade.jsp</result>			
+			<result name="searchNotAuditTrade" >
+				/display.jsp
+			</result>
+			<result name="auditTrade">
+				/display.jsp
+			</result>
+			<result name="searchTrade">
+				/display.jsp
+			</result>
+			<result name="deleteTrade" >
+				/display.jsp
+			</result>			
+		</action>
+	</package>
+</struts>

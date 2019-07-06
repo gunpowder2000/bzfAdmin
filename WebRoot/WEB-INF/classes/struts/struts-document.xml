@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="document" extends="struts-default,json-default" namespace="/document">
+
+		<action name="documentAction_*" class="com.hust.action.document.DocumentAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>
+			<result name="goEditDocument">/WEB-INF/page/document/documentManage.jsp</result>
+			<result name="updateDocument" type="json">
+			  <param name="root">msg</param>
+			</result>
+			
+			
+		</action>
+	</package>
+	<package name="work" extends="struts-default,json-default" namespace="/work">
+		<action name="workAction_*" class="com.hust.action.work.WorkAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>
+			<result name="goWorkManage">/WEB-INF/page/work/workmanage.jsp</result>
+			<result name="json" type="json">
+			  <param name="root">jsonMap</param>
+			</result>
+		</action>
+	</package>
+	<package name="indexManage" extends="struts-default,json-default" namespace="/index">
+		<action name="indexAction_*" class="com.hust.action.index.IndexAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>
+			<result name="goIndexManage">/WEB-INF/page/index/indexmanage.jsp</result>
+			<result name="goUpdatePassword">/WEB-INF/page/updatepassword.jsp</result>
+			<result name="json" type="json">
+			  <param name="root">jsonMap</param>
+			</result>
+		</action>
+	</package>
+	<package name="newsManage" extends="struts-default,json-default" namespace="/news">
+		<action name="newsAction_*" class="com.hust.action.news.NewsAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>
+			<result name="goNewsManage">/WEB-INF/page/news/newsmanage.jsp</result>
+			<result name="json" type="json">
+			  <param name="root">jsonMap</param>
+			</result>
+		</action>
+	</package>
+	<package name="goodsManage" extends="struts-default,json-default" namespace="/goods">
+		<action name="goodsAction_*" class="com.hust.action.goods.GoodsAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>
+			<result name="goGoodsManage">/WEB-INF/page/goods/goodsmanage.jsp</result>
+			<result name="goGoodsCatManage">/WEB-INF/page/goods/goodscatmanage.jsp</result>
+			<result name="json" type="json">
+			  <param name="root">jsonMap</param>
+			</result>
+			<result name="list" type="json">
+			  <param name="root">list</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="district" extends="struts-default" namespace="/district">
+
+		<action name="district_*" class="com.hust.action.district.DistrictAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>			
+			<result name="{1}" >
+				/display.jsp
+			</result>
+		</action>
+	</package>
+</struts>

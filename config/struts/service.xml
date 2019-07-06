@@ -1,0 +1,36 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="service" extends="struts-default" namespace="/service">
+
+		<action name="service_*" class="com.hust.action.service.ServiceAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>
+			<result name="goServiceManage">/WEB-INF/page/xtgl/servicemanage.jsp</result>			
+			<result name="gomanagerolemenu">/WEB-INF/page/xtgl/managerolemenu.jsp</result>
+			<result name="doSearchUser">
+				/display.jsp
+			</result>	
+			<result name="getJob" >
+				/display.jsp
+			</result>
+			<result name="getRole">
+				/display.jsp
+			</result>
+			<result name="addUser">
+				/display.jsp
+			</result>
+			<result name="editUser">
+				/display.jsp
+			</result>
+			<result name="cancelUser" >
+				/display.jsp
+			</result>		
+			<result name="saveRoleMenu">
+				/display.jsp
+			</result>
+		</action>
+	</package>
+</struts>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="tradecategory" extends="struts-default" namespace="/tradecategory">
+
+		<action name="tradecategory_*" class="com.hust.action.tradecategory.TradeCategoryAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>			
+			<result name="goTradeCategoryManage">/WEB-INF/page/gggl/tradecategorymanage.jsp</result>			
+			<result name="searchTradecategory">
+				/display.jsp
+			</result>
+			<result name="editTradcategory">
+				/display.jsp
+			</result>
+			<result name="addTradcategory">
+				/display.jsp
+			</result>
+			<result name="deleteTradcategory">
+				/display.jsp
+			</result>			
+		</action>
+	</package>
+</struts>

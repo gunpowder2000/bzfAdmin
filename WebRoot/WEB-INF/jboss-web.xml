@@ -1,0 +1,3 @@
+<jboss-web>
+   <context-root>/adm</context-root>   
+</jboss-web>

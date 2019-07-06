@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="icon" href="appico.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="appico.ico" type="image/x-icon"/> 
+<link rel="stylesheet" type="text/css"
+	href="js/jquery/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="js/jquery/themes/icon.css">
+<script type="text/javascript" src="js/jquery/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/jquery/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	function resetForm() {
+		$('#loginForm').form('clear');
+	}
+	function submitForm() {
+		$('#loginForm').form('submit', {
+			success : function(data) {
+				var data = eval('(' + data + ')');
+				if (!data.success)
+					alert(data.msg);
+				else
+					window.location.replace("main.jsp");
+
+			}
+		});
+	}
+</script>
+</head>
+
+<body>
+
+	<div id="loginWindow" class="easyui-window" title="后台管理系统登录"
+		style="width:370px;height:220px"
+		data-options="iconCls:'icon-tip',closable:false,   
+                collapsible:false,minimizable:false,maximizable:false,draggable:false,resizable:false">
+		<div class="easyui-layout" data-options="fit:true">
+			<div data-options="region:'south',border:false"
+				style="height:45px;text-align:right;padding:5px 23px 0">
+				<a id="submitButton" class="easyui-linkbutton"
+					data-options="iconCls:'icon-ok'" href="javascript:void(0)"
+					onclick="javascript:submitForm()">登录</a> <a id="resetButton"
+					class="easyui-linkbutton" data-options="iconCls:'icon-cancel'"
+					href="javascript:void(0)" onclick="javascript:resetForm()">重置</a>
+			</div>
+			<div data-options="region:'west',border:false"
+				style="width:130px;text-align:center;padding:10px 0 0">
+				<img width="115" height="115" alt="系统管理" src="images/login.png">
+			</div>
+			<div data-options="region:'center',border:false"
+				style="padding:40px 0 0 5px">
+				<form id="loginForm" method="post" action="login">
+					<table>
+						<tr>
+							<td>帐号：</td>
+							<td><input class="easyui-validatebox" type="text"
+								name="userNumber" data-options="required:true"></input>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"><br />
+							</td>
+						</tr>
+						<tr>
+							<td>密码：</td>
+							<td><input class="easyui-validatebox" type="password"
+								name="password" data-options="required:true"></input>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

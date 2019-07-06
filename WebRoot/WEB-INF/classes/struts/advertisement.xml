@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="advertisement" extends="struts-default" namespace="/advertisement">
+
+		<action name="advertisement_*" class="com.hust.action.advertisement.AdvertisementAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>
+			<result name="goAdvertisementRelease">/WEB-INF/page/gggl/advertisementrelease.jsp</result>
+			<result name="goAdvertisementManage">/WEB-INF/page/gggl/advertisementmanage.jsp</result>			
+			<result name="addAdvertisement" >
+				/display.jsp
+			</result>	
+			<result name="getAdvertisements" >
+				/display.jsp
+			</result>	
+			<result name="editAdvertisement" >
+				/display.jsp
+			</result>
+				
+		</action>
+	</package>
+</struts>

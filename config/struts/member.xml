@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="member" extends="struts-default" namespace="/member">
+
+		<action name="member_*" class="com.hust.action.member.MemberAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>
+			<result name="goaddmember">/WEB-INF/page/hygl/memberregister.jsp</result>
+			<result name="gomanagemember">/WEB-INF/page/hygl/membermanage.jsp</result>
+			<result name="gomanagerank">/WEB-INF/page/hygl/managerank.jsp</result>
+			<result name="gomanagerankmenu">/WEB-INF/page/hygl/managerankmenu.jsp</result>
+			<result name="doaddmember" >
+				/display.jsp
+			</result>
+			<result name="doEditMember" >
+				/display.jsp
+			</result>
+			<result name="searchMember" >
+				/display.jsp
+			</result>
+			<result name="getRank" >
+				/display.jsp
+			</result>
+			<result name="deleteRank" >
+				/display.jsp
+			</result>
+			<result name="addRank" >
+				/display.jsp
+			</result>
+			<result name="editRank" >
+				/display.jsp
+			</result>
+			<result name="saveRankMemberMenu" >
+				/display.jsp
+			</result>
+		</action>
+	</package>
+</struts>

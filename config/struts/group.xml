@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="group" extends="struts-default" namespace="/group">
+
+		<action name="group_*" class="com.hust.action.group.GroupAction"
+			method="{1}">
+			<result name="error">/WEB-INF/page/error.jsp</result>			
+			<result name="goGroupManage">/WEB-INF/page/sqgl/forumcategorymanage.jsp</result>
+			<result name="goWeiboGroupManage">/WEB-INF/page/sqgl/weibocategorymanage.jsp</result>
+			<result name="goDeleteTrade">/WEB-INF/page/gggl/deletetrade.jsp</result>			
+			<!-- 
+			<result name="searchGroup" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputstream</param>				
+			</result>
+			 -->
+			<result name="searchGroup" >
+				/display.jsp
+			</result>
+			<result name="editGroup" >
+				/display.jsp
+			</result>
+			<result name="addGroup" >
+				/display.jsp
+			</result>
+			<result name="deleteGroup" >
+				/display.jsp
+			</result>		
+			<result name="getRankGroupByGroupid">
+				/display.jsp
+			</result>
+			<result name="setRankGroup" >
+				/display.jsp
+			</result>
+			
+				
+		</action>
+	</package>
+</struts>

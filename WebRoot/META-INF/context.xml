@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource 
+auth="Container"
+driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+maxActive="100"
+maxIdle="40"
+maxWait="12000"
+name="companyShowDatabase"
+username="sa"
+password="zon100"
+type="javax.sql.DataSource" url="jdbc:sqlserver://192.168.116.128:1433;databaseName=company_show;integratedSecurity=false;" />
+
+</Context>
+

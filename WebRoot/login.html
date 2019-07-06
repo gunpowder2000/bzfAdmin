@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台登陆</title>
+<link href="css/login_style.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="appico.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="appico.ico" type="image/x-icon"/> 
+<script type="text/javascript" src="js/jquery/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/jquery/easyui-lang-zh_CN.js"></script>
+<style>
+	input{ background: none; width:130px; height:20px; line-height:20px; padding:0 5px; border:none; color:#fff;}
+	.input_1{ position:absolute; left:367px;top:205px;}
+	.input_2{ position:absolute; left:367px;top:234px;}
+	.input_3{position:absolute; left:515px;top:235px;}
+</style>
+<script type="text/javascript">
+	function resetForm() {
+		$('#loginForm').form('clear');
+	}
+	function submitForm() {
+		$('#loginForm').form('submit', {
+			success : function(data) {
+				var data = eval('(' + data + ')');
+				if (!data.success)
+					alert(data.msg);
+				else
+					window.location.replace("main.jsp");
+
+			}
+		});
+	}
+</script>
+</head>
+
+<body style="background:#3f97cc; width:99%; height:100%;">
+<form id="loginForm" method="post" action="login">
+<div style="background:url(images/ht_login.gif) 0 0 no-repeat; width:903px; height:443px; margin:0 auto; margin-top:30px; position:relative;">
+  <div class="input_1"><input type="text" name="userNumber"></div>
+  <div class="input_2"><input type="password" name="password"></div>
+  <div class="input_3"><a href="javascript:void(0)"	onclick="javascript:submitForm()"><img src="images/ht_login_bt.gif" /></a></div>
+</div>
+</form>
+
+</body>
+</html>
